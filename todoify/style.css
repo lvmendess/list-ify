@@ -1,0 +1,152 @@
+body{
+    background-image: linear-gradient(180deg, #49311d 0%, #744621 20%, #be6a24 100%);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    width: 85vw;
+    max-height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 1em 1em 1em 6.5em;
+}
+
+#website-title{
+    color: antiquewhite;
+    width: 22%;
+}
+
+#searchbar{
+    height: 2.5em;
+    width: 78%;
+    margin-left: 3em;
+    border-radius: 1em;
+    outline: transparent;
+}
+
+#searchbar:focus, #searchbar:active, #searchbar:hover, 
+#tasktitle:hover, #tasktitle:focus, #tasktitle:active,
+#taskfield:focus, #taskfield:active, #taskfield:hover{
+    border: 0.15em solid #be6a24;
+}
+
+.screen{
+    width: 95vw;
+    height: 80vh;
+    max-height: 75.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 1em 1em 1em;
+}
+
+.inputField{
+    width: 22%;
+    height: 105%;
+    border-radius: 1.5em;
+    border: none;
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#newtask{
+    margin-top: 2em;
+}
+
+#inputtasktitle{
+    margin-bottom: 0;
+    font-weight: 200;
+}
+
+#inputtaskdesc{
+    margin-bottom: 0;
+    font-weight: 200;
+}
+
+input, textarea{
+    border-radius: 0.3em;
+    border-color: #7a4c27;
+    border-style: solid;
+    width: 15em;
+}
+
+#tasktitle{
+    height: 2em;
+    outline: transparent;
+}
+
+#taskfield{
+    min-height: 20em;
+    max-height: 20em;
+    min-width: 15em;
+    max-width: 15em;
+    resize: none;
+    outline: transparent;
+}
+
+#savebttn{
+    background-image: linear-gradient(195deg, #49311d 0%, #744621 20%, #be6a24 100%);
+    color: antiquewhite;
+    border-radius: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#savebttn:hover{
+    background-image: linear-gradient(195deg, #835835 0%, #744621 20%, #da7a2c 100%);
+    transform: translateY(-0.1em);
+    transition-duration: 0.3s;
+}
+
+.todofield{
+    width: 75%;
+    height: 105%;
+    border-radius: 1.5em;
+    border: none;
+    background-color:antiquewhite;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+p{
+    font-weight:600;
+    color: #7a4c27;
+}
+
+button{
+    border: transparent;
+    height: 2.5em;
+    width: 6em;
+    background-color: antiquewhite;
+    font-weight:600;
+    color: #7a4c27;
+}
+
+#filter:hover, 
+#filter:active, 
+#filter:focus{
+    border: 0.2em solid #7a4c27;
+    border-radius: 0.5em;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 0.2vh;
+    margin: 3em 0 2em 0;
+}
+
+footer p{
+    font-size: 1em;
+    font-weight: 200;
+}
