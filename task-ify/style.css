@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(180deg, #49311d 0%, #744621 20%, #be6a24 100%);
+    background-image: linear-gradient(180deg, #05299E 0%, #3252bb 20%, #5f7ee2 100%);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -18,15 +18,13 @@ header{
     width: 22%;
 }
 
-#countToDo{
-    height: 2.5em;
-    width: 78%;
-    margin-left: 3em;
-    border-radius: 1em;
+#tasksCount{
+    color: #7f9af5;
+    font-weight: 600;
 }
 
 #task:hover, #task:focus, #task:active{
-    border: 0.15em solid #be6a24;
+    border: 0.15em solid #3567d3;
 }
 
 .screen{
@@ -62,7 +60,7 @@ form{
 
 input[type="text"]{
     border-radius: 0.3em;
-    border-color: #7a4c27;
+    border-color: #05299E;
     border-style: solid;
     width: 80%;
 }
@@ -73,16 +71,16 @@ input[type="text"]{
 }
 
 #savebttn{
-    background-image: linear-gradient(195deg, #49311d 0%, #744621 20%, #be6a24 100%);
+    background-color: #05299E;
     color: antiquewhite;
     border-radius: 0.5em;
     margin-bottom: 1.5em;
 }
 
 #savebttn:hover{
-    background-image: linear-gradient(195deg, #835835 0%, #744621 20%, #da7a2c 100%);
+    background-color: #274bc4;
     transform: translateY(-0.1em);
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .todofield{
@@ -102,7 +100,7 @@ nav{
 
 p{
     font-weight:600;
-    color: #7a4c27;
+    color: #05299E;
 }
 
 button{
@@ -111,20 +109,20 @@ button{
     width: 6em;
     background-color: antiquewhite;
     font-weight:600;
-    color: #7a4c27;
+    color: #1544e0;
 }
 
 #filter:hover, 
 #filter:active, 
 #filter:focus{
-    border: 0.2em solid #7a4c27;
+    border: 0.2em solid #1544e0;
     border-radius: 0.5em;
 }
 
 .taskgallery{
     box-sizing: border-box;
     border-radius: 8px;
-    border: 0.1em solid #925f36;
+    border: 0.1em solid #1544e0;
     width: 90%;
     height: 80%;
     display: flex;
@@ -183,5 +181,5 @@ footer{
 footer p{
     font-size: 1em;
     font-weight: 200;
-    color: #ffbc86;
+    color: antiquewhite;
 }

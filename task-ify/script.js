@@ -5,14 +5,23 @@ function count(){
     return tasks.length;
 }
 
-function getToDo(){
-    let todo = 0;
+function getDone(){
+    let doneNum = 0;
     for(let i = 0; i<tasks.length; i++){
-        if(tasks[i].classList.has('to-do')){
-            todo++;
+        if(tasks[i].classList.contains('done')){
+            doneNum+=1;
         }
     }
-    return todo;
+    return doneNum;
+}
+
+function updateCount(){
+    const allCount = document.getElementById('all');
+    let all = count();
+    allCount.textContent = all;
+    const doneCount = document.getElementById('done');
+    let done = getDone();
+    doneCount.textContent = done;
 }
 
 function saveTask(){
@@ -36,12 +45,15 @@ function saveTask(){
             if (this.checked) {
                 label.style.textDecoration = 'line-through';
                 task.classList.remove('to-do');
-                task.classList.add('done'); 
+                task.classList.add('done');
+                updateCount();
             } else {
                 label.style.textDecoration = 'none';  
                 task.classList.remove('done');
                 task.classList.add('to-do'); 
+                updateCount();
             }
+            updateCount();
         });
 
         task.appendChild(checkbox);
@@ -49,8 +61,9 @@ function saveTask(){
 
         document.getElementById('taskview').appendChild(task);
         tasks.push(task);
-        newTask.value = '';
+        updateCount();
     }
+    newTask.value = '';
 }
 
 function viewAll(){
