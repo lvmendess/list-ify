@@ -8,7 +8,7 @@ header{
     max-height: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
+    justify-content:space-evenly;
     align-items: center;
     margin: 1em 1em 1em 6.5em;
 }
@@ -26,7 +26,9 @@ header{
     outline: transparent;
 }
 
-#task:hover, #task:focus, #task:active{
+#searchbar:focus, #searchbar:active, #searchbar:hover, 
+#tasktitle:hover, #tasktitle:focus, #tasktitle:active,
+#taskfield:focus, #taskfield:active, #taskfield:hover{
     border: 0.15em solid #be6a24;
 }
 
@@ -40,9 +42,9 @@ header{
     margin: 2em 1em 1em 1em;
 }
 
-form{
+.inputField{
     width: 22%;
-    height: 35%;
+    height: 105%;
     border-radius: 1.5em;
     border: none;
     background-color:antiquewhite;
@@ -61,15 +63,29 @@ form{
     font-weight: 200;
 }
 
-input{
+#inputtaskdesc{
+    margin-bottom: 0;
+    font-weight: 200;
+}
+
+input, textarea{
     border-radius: 0.3em;
     border-color: #7a4c27;
     border-style: solid;
     width: 15em;
 }
 
-#task{
+#tasktitle{
     height: 2em;
+    outline: transparent;
+}
+
+#taskfield{
+    min-height: 20em;
+    max-height: 20em;
+    min-width: 15em;
+    max-width: 15em;
+    resize: none;
     outline: transparent;
 }
 
@@ -83,7 +99,7 @@ input{
 #savebttn:hover{
     background-image: linear-gradient(195deg, #835835 0%, #744621 20%, #da7a2c 100%);
     transform: translateY(-0.1em);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
 }
 
 .todofield{
@@ -122,46 +138,6 @@ button{
     border-radius: 0.5em;
 }
 
-.taskgallery{
-    box-sizing: border-box;
-    display: flex;
-    position: absolute;
-    margin: 0 0 0 2.5em;
-    height: 60%;
-    width: 65%;
-    border: 0.2em solid #744621;
-    border-radius: 0.5em;
-}
-
-.taskview{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    padding: 1em 1em 1em 1em;
-    gap: 1.5vw 3vw;
-}
-
-#task1{
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    height: 5%;
-    align-content:center;
-}
-
-#task1 > label{
-    margin: 0px 10px;
-    border-radius: 20px;
-    width: 95%;
-    align-content: center;
-    padding-left: 15px;
-    font-size: 1.8vh;
-    color: #0A0903;
-    background-color: #e48752;
-}
-
 footer{
     display: flex;
     justify-content: center;
@@ -173,5 +149,4 @@ footer{
 footer p{
     font-size: 1em;
     font-weight: 200;
-    color: #ffbc86;
 }

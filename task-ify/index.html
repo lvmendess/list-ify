@@ -8,25 +8,24 @@
     <body>
         <header>
             <h2 id="website-title">task-ify</h2>
-            <input id="searchbar" type="text" placeholder="search note by title, content...">
         </header>
         <div class="screen">
-            <div class="inputField">
+            <form>
                 <p id="newtask">new task</p>
-                <p id="inputtasktitle">title</p>
-                <input type="text" id="tasktitle">
-                <p id="inputtaskdesc">description</p>
-                <textarea type="text" id="taskfield"></textarea>
-                <button id="savebttn">save</button>
-            </div>
+                <input type="text" id="task" maxlength="30">
+                <button type="button" id="savebttn" onclick="saveTask()">save</button>
+            </form>
             <div class="todofield">
                 <nav>
-                    <p>Filters:</p>
-                    <button id="filter">ALL</button>
-                    <button id="filter">TO-DO</button>
-                    <button id="filter">DONE</button>
+                    <p>filters:</p>
+                    <button type="button" id="filter" onclick="viewAll()">ALL</button>
+                    <button type="button" id="filter" onclick="viewToDo()">TO-DO</button>
+                    <button type="button" id="filter" onclick="viewDone()">DONE</button>
                 </nav>
-                <main></main>
+                <div class="taskgallery" id="taskgallery">
+                    <div class="taskview" id="taskview">
+                    </div>
+                </div>
             </div>
         </div>
         <footer><p>made by livia&copy;</p></footer>

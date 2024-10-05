@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task-ify - by livia</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h2 id="website-title">task-ify</h2>
+            <input id="searchbar" type="text" placeholder="search note by title, content...">
+        </header>
+        <div class="screen">
+            <div class="inputField">
+                <p id="newtask">new task</p>
+                <p id="inputtasktitle">title</p>
+                <input type="text" id="tasktitle">
+                <p id="inputtaskdesc">description</p>
+                <textarea type="text" id="taskfield"></textarea>
+                <button id="savebttn">save</button>
+            </div>
+            <div class="todofield">
+                <nav>
+                    <p>Filters:</p>
+                    <button id="filter">ALL</button>
+                    <button id="filter">TO-DO</button>
+                    <button id="filter">DONE</button>
+                </nav>
+                <main></main>
+            </div>
+        </div>
+        <footer><p>made by livia&copy;</p></footer>
+        <script src="script.js"></script>
+    </body>
+</html>
