@@ -18,12 +18,11 @@ header{
     width: 22%;
 }
 
-#searchbar{
+#countToDo{
     height: 2.5em;
     width: 78%;
     margin-left: 3em;
     border-radius: 1em;
-    outline: transparent;
 }
 
 #task:hover, #task:focus, #task:active{
@@ -61,11 +60,11 @@ form{
     font-weight: 200;
 }
 
-input{
+input[type="text"]{
     border-radius: 0.3em;
     border-color: #7a4c27;
     border-style: solid;
-    width: 15em;
+    width: 80%;
 }
 
 #task{
@@ -124,13 +123,16 @@ button{
 
 .taskgallery{
     box-sizing: border-box;
+    border-radius: 8px;
+    border: 0.1em solid #925f36;
+    width: 90%;
+    height: 80%;
     display: flex;
-    position: absolute;
-    margin: 0 0 0 2.5em;
-    height: 60%;
-    width: 65%;
-    border: 0.2em solid #744621;
-    border-radius: 0.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3em;
+    padding: 20px;
 }
 
 .taskview{
@@ -139,8 +141,10 @@ button{
     align-items: center;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 1em 1em 1em 1em;
-    gap: 1.5vw 3vw;
+    width: 98%;
+    height: 98%;
+    gap: 1em 1em;
+    margin: 1em 1em 1em 1em;
 }
 
 #task1{
@@ -148,18 +152,24 @@ button{
     flex-direction: row;
     width: 30%;
     height: 5%;
-    align-content:center;
+    align-content: center;
 }
 
 #task1 > label{
     margin: 0px 10px;
     border-radius: 20px;
-    width: 95%;
+    width: 100%;
     align-content: center;
-    padding-left: 15px;
+    padding-left: 10px;
     font-size: 1.8vh;
     color: #0A0903;
-    background-color: #e48752;
+    background-color: #feaf55;
+}
+
+#check{
+    padding:0 !important;
+    margin:0 !important;
+    border: none;
 }
 
 footer{

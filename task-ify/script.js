@@ -1,7 +1,18 @@
 let tasks = [];
+let style;
 
 function count(){
     return tasks.length;
+}
+
+function getToDo(){
+    let todo = 0;
+    for(let i = 0; i<tasks.length; i++){
+        if(tasks[i].classList.has('to-do')){
+            todo++;
+        }
+    }
+    return todo;
 }
 
 function saveTask(){
@@ -14,11 +25,12 @@ function saveTask(){
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+        checkbox.id = 'check'
 
         const label = document.createElement('label');
         label.textContent = newTask.value;
         
-        //task.classList.add('to-do');
+        task.classList.add('to-do');
 
         checkbox.addEventListener('change', function() {
             if (this.checked) {
