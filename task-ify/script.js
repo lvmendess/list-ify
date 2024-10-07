@@ -2,10 +2,10 @@ let tasks = [];
 let style;
 
 function count(){
-    return tasks.length;
+    return tasks.length; //all
 }
 
-function getDone(){
+function getDone(){ //done
     let doneNum = 0;
     for(let i = 0; i<tasks.length; i++){
         if(tasks[i].classList.contains('done')){

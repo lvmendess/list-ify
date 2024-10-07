@@ -10,7 +10,7 @@ header{
     flex-direction: row;
     justify-content:space-evenly;
     align-items: center;
-    margin: 1em 1em 1em 6.5em;
+    margin: 1em 1em 1em 5em;
 }
 
 #website-title{
@@ -27,9 +27,9 @@ header{
 }
 
 #searchbar:focus, #searchbar:active, #searchbar:hover, 
-#tasktitle:hover, #tasktitle:focus, #tasktitle:active,
-#taskfield:focus, #taskfield:active, #taskfield:hover{
-    border: 0.15em solid #be6a24;
+#notetitle:hover, #notetitle:focus, #notetitle:active,
+#notedesc:focus, #notedesc:active, #notedesc:hover{
+    border: 0.15em solid #8d24be;
 }
 
 .screen{
@@ -48,22 +48,25 @@ header{
     border-radius: 1.5em;
     border: none;
     background-color:antiquewhite;
+}
+
+form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-#newtask{
+#newnote{
     margin-top: 2em;
 }
 
-#inputtasktitle{
+#inputnotetitle{
     margin-bottom: 0;
     font-weight: 200;
 }
 
-#inputtaskdesc{
+#inputnotedesc{
     margin-bottom: 0;
     font-weight: 200;
 }
@@ -75,12 +78,12 @@ input, textarea{
     width: 15em;
 }
 
-#tasktitle{
+#notetitle{
     height: 2em;
     outline: transparent;
 }
 
-#taskfield{
+#notedesc{
     min-height: 20em;
     max-height: 20em;
     min-width: 15em;
@@ -93,6 +96,7 @@ input, textarea{
     background-image: linear-gradient(195deg, #49311d 0%, #744621 20%, #be6a24 100%);
     color: antiquewhite;
     border-radius: 0.5em;
+    margin-top: 1em;
     margin-bottom: 1.5em;
 }
 
@@ -102,19 +106,12 @@ input, textarea{
     transition-duration: 0.3s;
 }
 
-.todofield{
+.noteview{
     width: 75%;
     height: 105%;
     border-radius: 1.5em;
     border: none;
     background-color:antiquewhite;
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2em;
 }
 
 p{
@@ -131,11 +128,30 @@ button{
     color: #7a4c27;
 }
 
-#filter:hover, 
-#filter:active, 
-#filter:focus{
-    border: 0.2em solid #7a4c27;
-    border-radius: 0.5em;
+.noteview{
+    box-sizing: border-box;
+    border-radius: 1.5em;
+    border: 0.1em solid #e07015;
+    width: 90%;
+    height: 105%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3em;
+    padding: 20px;
+}
+
+.notegallery{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 98%;
+    height: 98%;
+    gap: 1em 1em;
+    margin: 1em 1em 1em 1em;
 }
 
 footer{

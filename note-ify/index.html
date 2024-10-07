@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>task-ify - by livia</title>
+        <title>note-ify - by livia</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header>
-            <h2 id="website-title">task-ify</h2>
+            <h2 id="website-title">note-ify</h2>
             <input id="searchbar" type="text" placeholder="search note by title, content...">
         </header>
         <div class="screen">
             <div class="inputField">
-                <p id="newtask">new task</p>
-                <p id="inputtasktitle">title</p>
-                <input type="text" id="tasktitle">
-                <p id="inputtaskdesc">description</p>
-                <textarea type="text" id="taskfield"></textarea>
-                <button id="savebttn">save</button>
+                <form>
+                    <p id="newnote">new note</p>
+                    <p id="inputtasktitle">title</p>
+                    <input type="text" id="notetitle">
+                    <p id="inputnotedesc">description</p>
+                    <textarea type="text" id="notedesc"></textarea>
+                    <button type="button" id="savebttn" onclick="saveNote()">save</button>
+                </form>
             </div>
-            <div class="todofield">
-                <nav>
-                    <p>Filters:</p>
-                    <button id="filter">ALL</button>
-                    <button id="filter">TO-DO</button>
-                    <button id="filter">DONE</button>
-                </nav>
-                <main></main>
+            <div class="noteview">
+                <div class="notegallery" id="notegallery">
+                    <!--style div da nota-->
+                </div>
             </div>
         </div>
         <footer><p>made by livia&copy;</p></footer>
