@@ -1,14 +1,8 @@
-let notes = [];
-let style;
-
 function saveNote(){ //funciona
     const newNoteTitle = document.getElementById('notetitle');
     const newNoteDesc = document.getElementById('notedesc');
 
     if(newNoteTitle.value != '' && newNoteDesc.value != ''){
-        const note = new Note(newNoteTitle.value, newNoteDesc.value);
-        notes.push(note);
-        
         const noteDiv = document.createElement('div');
         noteDiv.className = 'note';
         noteDiv.id = 'note';
@@ -38,20 +32,18 @@ function saveNote(){ //funciona
     newNoteDesc.value = '';
 }
 
-class Note {
-    constructor(title, description) {
-        this.title = title;
-        this.description = description;
-    }
-}
+function search() {
+    const searchTerm = document.getElementById("searchbar").value.toLowerCase();
+    const noteElements = document.querySelectorAll('#notegallery .note');
+  
+    noteElements.forEach((noteElement, index) => {
+      const title = noteElement.querySelector('#title').textContent.toLowerCase();
+      const desc = noteElement.querySelector('#desc').textContent.toLowerCase();
 
-function search(){ //ainda não funciona
-    const searchTerm = document.getElementById('searchbar').value;
-    notes.forEach(note => {
-        if(note.title.contains(searchTerm) || note.description.contains(searchTerm)){
-
-        }else{
-
-        }
+      if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+        noteElement.style.display = 'block';
+      } else {
+        noteElement.style.display = 'none';
+      }
     });
-}
+  }

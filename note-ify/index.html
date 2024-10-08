@@ -8,16 +8,16 @@
     <body>
         <header>
             <h2 id="website-title">note-ify</h2>
-            <input id="searchbar" type="text" placeholder="search note by title, content...">
+            <input id="searchbar" type="text" placeholder="search note by title, content..." oninput="search()">
         </header>
         <div class="screen">
             <div class="inputField">
                 <form>
                     <p id="newnote">new note</p>
-                    <p id="inputtasktitle">title</p>
-                    <input type="text" id="notetitle">
+                    <p id="inputnotetitle">title</p>
+                    <input type="text" id="notetitle" maxlength="30">
                     <p id="inputnotedesc">description</p>
-                    <textarea type="text" id="notedesc"></textarea>
+                    <textarea type="text" id="notedesc" maxlength="400"></textarea>
                     <button type="button" id="savebttn" onclick="saveNote()">save</button>
                 </form>
             </div>
