@@ -153,6 +153,10 @@ button{
     align-content: center;
 }
 
+#task1>label:hover{
+    box-shadow: 0.1em 0.1em 0.3em #4e71e4;
+}
+
 #task1 > label{
     margin: 0px 10px;
     border-radius: 20px;

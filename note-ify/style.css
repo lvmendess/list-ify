@@ -120,16 +120,14 @@ input::placeholder{
 
 p{
     font-weight:600;
-    color: #0C090D;
+    color: #1b788f;
 }
 
 button{
     border: transparent;
     height: 2.5em;
     width: 6em;
-    background-color: antiquewhite;
     font-weight:600;
-    color: #7a4c27;
 }
 
 .noteview{
@@ -168,6 +166,11 @@ button{
     align-items: center;
     border: solid #e28131;
     border-radius: 0.3em;
+}
+
+.note:hover{
+    border: solid #ee7919;
+    box-shadow: 0.1em 0.1em 0.3em #ee7919;
 }
 
 #title{
